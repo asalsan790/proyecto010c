@@ -1,0 +1,15 @@
+<div *ngIf="triangulos!=null; else espera">
+  <table border="1">
+    <tr>
+      <td>Nombre</td>
+      <td>Base</td>
+      <td>Altura</td>
+    </tr>
+    <tr *ngFor="let art of triangulos">
+      <td>{{art._nombre}}</td>
+      <td>{{art._base}}</td>
+      <td>{{art._altura}}</td>
+    </tr>
+  </table>
+</div>
+<ng-template #espera>Esperando datos...</ng-template>
